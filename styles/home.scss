@@ -1,0 +1,364 @@
+@import url(./_variables.scss);
+@import url(./_global.scss);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button{
+    cursor:pointer;
+    border: 0;
+}
+input{
+    outline: 0;
+    border: 0;
+    &:focus{
+        outline: 0;
+        border: 0;
+    }
+}
+
+li, a{
+    list-style: none;
+    text-decoration: none;
+    color: #222;
+}
+
+
+
+
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: min(80px, 10vh) 1fr;
+    font-size: 16px;
+    color: #222;
+
+}
+header{
+    width: 100%;
+    box-shadow: 1px 1px 1px hsl(0, 0%, 93%);
+    .container_header{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1280px;
+        margin: 0 auto;
+        .btn_drawer{
+                display: none;
+            }
+        nav{
+           ul{
+            display: flex;
+            gap: 1rem;
+           }
+        }
+        @media (max-width: 768px) {
+            padding:0 2rem;
+            .btn_drawer{
+                display: flex;
+            }
+            h1{
+                display: none;
+    
+            } 
+            nav{
+                display: none;
+            }  
+        }
+    }
+
+    
+}
+
+
+#drawer{
+    visibility: hidden;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background-color: white;
+    height: 100vh;
+    width: 90%;
+    z-index: 111;
+    transition: .8s ease-in-out;
+    .header_drawer{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        button{
+            padding: .5rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+
+     
+    }
+    nav{
+        margin: 4rem;
+        height: 100%;
+        ul{
+            height: 100%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 1rem;
+            li{
+             a{
+                font-size: 1.5rem;
+                &:hover{
+                    color: #034822;
+                }
+             }
+            }
+        }
+    }
+   &.visible{
+    visibility: visible;
+
+        left: 0;
+    }
+
+}
+.btn_drawer{
+    padding: .5rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;   
+}
+main{
+    width: 100%;
+    height: 100%;
+    padding: 2rem 0;
+
+    @media (max-width: 768px) {
+        padding: 2rem;
+    }
+    .container_content{
+        max-width: 1280px;
+        height: 100%;
+        margin: 0 auto;
+        border-radius: 10px;
+        background-color: #eee;
+        display: grid;
+        grid-template-columns: 30% 1fr;
+        .selected_batch{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+     
+            padding: 1rem;
+            border-right: 2px solid #fff;
+
+            overflow-y: auto;
+
+            gap: .8rem;
+
+            >h2{
+                font-size: 1.5rem;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+            .card{
+                width: 100%;
+             
+                background-color: white;
+                margin-bottom: 1rem;
+                border-radius: 10px;
+                padding: 0.8rem;
+                .card_header{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    p{
+                        font-size: 0.9rem;
+                    }
+                    span{
+                        padding: 0.8rem;
+                        width: 80px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #eee;
+                        border-radius: 1rem;
+                      
+                    }
+                }
+                .card_body{
+                    margin-top: .8rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 1rem;
+                    .date_picker{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: .4rem;
+                        justify-content: center;
+                        input{
+                            width: 100%;
+                            background-color: #eee;
+                            border-radius: .7rem;
+                            padding: .7rem;
+                        }
+
+                    }
+                }
+                button{
+                    background-color: #034822;
+                    width: 100%;
+                    margin-top: .8rem;
+                    padding: .8rem;
+                    color: #fff;
+                    border-radius: 10px;
+                }
+            }
+            @media (max-width: 768px) {
+                display: none;
+            }
+            
+        }
+        .container_batchs{
+            background-image: url(../assets/bg.png);
+            background-position-y: center;
+            background-position-x: center;
+;
+            object-fit: contain;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            .title{
+                position: absolute;
+                left: 12%;
+                top: 1.7rem;
+                h2{
+                    font-size: 2rem;
+                }
+            }
+            .status{
+                bottom: .5rem;
+                width: 100%;
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.8rem;
+             
+               .indicator_container{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: .8px;
+                .status_indicator_card{
+                    width: 2rem;
+                    height: 2rem;
+                    border: 1px solid #034822;
+                    border-radius: 1rem;
+
+                    &.occuped{
+                        background-color: #034822;
+                    }
+                    &.selected{
+                        background-color: #BBDECB;
+                        border: 1px solid #BBDECB;
+                    }
+                
+                   
+                }
+               }
+            }
+            .list_batchs{
+                width: 70%;
+                height: 60%;
+                gap: 10px;
+                display: grid;
+                grid-template-columns: repeat(10, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                transform: rotate(-1deg);
+
+                .batch{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid #034822;
+                    width: 50px;
+                    height: 80px;
+                    border-radius: 10px;
+                    &.occuped{
+                        border: 1px solid #BBDECB;
+                        background-color: #BBDECB;
+                    }
+                    &.selected{
+                        border: 1px solid #034822;
+                        background-color: #034822;
+                        color: white;
+                    }
+                }
+            }
+         
+            @media (max-width:768px) {
+                background-image: none;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 0;
+            
+                display: flex;
+                gap: 1rem;
+                flex-direction: column;
+                .title{
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    position: relative;
+                }
+                .status{
+                    position: relative;
+                    left: 0;
+                    top: 0;
+                    
+                    right: 0;
+                    bottom: 0;
+                }
+                .list_batchs{
+                    position: relative;
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-rows: repeat(10, 1fr);
+                    overflow-y: auto;
+                    position: relative;
+                    height: 500px;
+                    padding: 1rem 0;
+                    transform: none;
+                   
+                 
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            padding: 1rem 0;
+           
+            justify-content: flex-start;
+        }
+    }
+}
