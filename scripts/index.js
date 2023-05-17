@@ -9,3 +9,4 @@ function handleOpenDrawer(){
     console.log("here")
     drawer.classList.toggle("visible")
 }
+
