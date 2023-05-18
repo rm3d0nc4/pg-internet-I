@@ -271,7 +271,6 @@ main .container_content .container_batchs .footer_btn {
     height: 97%;
     padding: 0;
     display: flex;
-    background-color: red;
     gap: 1rem;
     flex-direction: column;
   }
@@ -280,6 +279,7 @@ main .container_content .container_batchs .footer_btn {
     top: 0;
     right: 0;
     bottom: 0;
+    font-size: 1rem;
     position: relative;
   }
   main .container_content .container_batchs .status {

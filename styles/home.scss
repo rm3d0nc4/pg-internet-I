@@ -157,6 +157,7 @@ main{
             }
             @media (max-width: 768px) {
                 display: none;
+
             }
             
         }
@@ -178,6 +179,7 @@ main{
                 h2{
                     font-size: 2rem;
                 }
+             
             }
             .status{
                 bottom: .5rem;
@@ -252,7 +254,7 @@ main{
                 padding: 0;
             
                 display: flex;
-                background-color: red;
+                
                 gap: 1rem;
                 flex-direction: column;
                 .title{
@@ -260,6 +262,7 @@ main{
                     top: 0;
                     right: 0;
                     bottom: 0;
+                    font-size: 1rem;
                     position: relative;
                 }
                 .status{
@@ -361,9 +364,9 @@ main{
         border-radius: 10px;
     }
 
-.itens_selected{
-    display: none;
-}
+        .itens_selected{
+            display: none;
+        }
 
         @media (max-width: 768px) {
            max-width: 100%;
