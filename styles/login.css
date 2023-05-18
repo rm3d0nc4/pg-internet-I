@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+}
+
+input {
+  outline: 0;
+  border: 0;
+}
+input:focus {
+  outline: 0;
+  border: 0;
+}
+
+li, a {
+  list-style: none;
+  text-decoration: none;
+  color: #222;
+}
+
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: min(80px, 10vh) 1fr;
+  font-size: 16px;
+  color: #222;
+}
+
+body {
+  background-image: url("../assets/login_bg.png");
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui;
+}
+
+button {
+  font-size: 16;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+label {
+  padding-top: 20px;
+}
+
+#login_square {
+  background-color: white;
+  width: 325px;
+  height: 415px;
+  text-align: left;
+  border-radius: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#login_header {
+  font-size: 35px;
+  padding-top: 30px;
+}
+
+#login_footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 16px;
+}
+
+#login_body {
+  gap: 0px;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.placeholderLogin {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputStyle {
+  background-color: #F2F2F2;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+#buttonOne {
+  background-color: #034822;
+  color: white;
+}
+
+#buttonTwo {
+  background-color: white;
+  color: #034822;
+  border-color: #034822;
+  border: 3px solid #034822;
+}
+
+/*# sourceMappingURL=login.css.map */

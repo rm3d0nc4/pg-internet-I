@@ -1,0 +1,76 @@
+@import "./_variables.scss";
+@import "./global.scss";
+
+body {
+    background-image: url("../assets/login_bg.png");
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui;
+}
+
+button {
+    font-size: 16;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+label {
+    padding-top: 20px;
+}
+
+#login_square {
+    background-color: white;
+    width: 325px;
+    height: 415px;
+    // padding: 15px;
+    
+    text-align: left;
+    border-radius: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#login_header {
+    font-size: 35px;
+    padding-top: 30px;
+    // padding-bottom: 10px;
+}
+
+#login_footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 16px;
+}
+
+#login_body {
+    gap: 0px;
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.placeholderLogin {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputStyle {
+    background-color: #F2F2F2;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+#buttonOne {
+    background-color: #034822;
+    color: white;
+}
+
+#buttonTwo {
+    background-color: white;
+    color: #034822;
+    border-color: #034822;
+    border: 3px solid #034822;
+}

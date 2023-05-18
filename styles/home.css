@@ -49,8 +49,7 @@ header .container_header {
   margin: 0 auto;
 }
 header .container_header img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   height: 80%;
 }
 header .container_header .btn_drawer {
@@ -189,8 +188,7 @@ main .container_content .container_batchs {
   background-image: url(../assets/bg.png);
   background-position-y: center;
   background-position-x: center;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -445,4 +443,6 @@ main .container_content .container_batchs .footer_btn {
   padding: 0.8rem;
   color: #fff;
   border-radius: 10px;
-}/*# sourceMappingURL=home.css.map */
+}
+
+/*# sourceMappingURL=home.css.map */
